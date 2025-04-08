@@ -4,6 +4,8 @@ venv/
 .env/
 torch_cpu.dll
 dnnl.lib
+env_Ph
+.python-version
 
 # Ignore Python cache
 __pycache__/
@@ -14,7 +16,7 @@ __pycache__/
 # Ignore system files
 CACHEDIR.TAG
 pyvenv.cfg
-trained_model/poet-gpt2/model.safetensors
+trained_model/
 
 # Ignore project directories
 Include/

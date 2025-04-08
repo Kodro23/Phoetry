@@ -1,0 +1,4 @@
+{
+    "nature": ["tree", "flower", "sunset", "sunrise", "cloud", "mountain", "beach", "river", "lakewaterfall", "forest", "grassland", "desert", "rain", "snow", "road", "traffic jam", "hill", "valley", "cave", "farm", "garden", "coastline", "field", "pond", "sky", "animal", "insect", "fungi", "leaf", "pebble", "stone", "dog", "cat", "bird", "butterfly", "bee", "stars", "moon", "sun"], 
+    "nourriture": ["pomme", "banane", "carotte", "tomate", "poulet", "poisson", "riz", "p\u00e2tes", "fromage", "lait", "\u0153uf", "pain", "huile", "sel", "poivre", "sucre", "farine", "chocolat", "miel", "yaourt", "\u00e9pinard", "brocoli", "avocat", "citron", "ail", "oignon", "persil", "basilic", "thym", "romarin"]
+}

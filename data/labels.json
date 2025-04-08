@@ -1,0 +1,10 @@
+{
+    "labels" : [
+        "tree", "flower", "sunset", "sunrise", "cloud", "mountain", "beach", "river", "lake",
+        "waterfall", "forest", "grassland", "desert", "rain", "snow", "road", "traffic jam", "hill",
+        "valley", "cave", "farm", "garden", "coastline", "field", "pond", "sky", "animal", "insect",
+        "fungi", "leaf", "pebble", "stone", "dog", "cat", "bird", "butterfly",
+        "bee", "stars", "moon", "sun"
+    ]
+    
+}

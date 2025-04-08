@@ -1,13 +1,26 @@
+# Used for models 
+accelerate==1.4.0
+argparse==1.1
+datasets==3.3.0
 ipykernel==6.29.5
-pandas==2.2.3
+matplotlib==3.10.0
 numpy==2.2.3
-torch==2.6.0
-tqdm==4.67.1
+pandas==2.2.3
 pillow==11.1.0
 scikit-learn==1.6.1
+torch==2.6.0
+tqdm==4.67.1
 transformers==4.49.0
-datasets==3.3.0
-argparse==1.1
-accelerate==1.4.0
-matplotlib==3.10.0
 s3fs<=2024.12.0
+joblib==1.4.2
+
+# Used for managing a clened text
+pylint==3.3.6
+black==25.1.0
+
+# Used for documentation
+pdoc==15.0.1
+
+# Used for API
+fastapi==0.115.12
+uvicorn==0.34.0
