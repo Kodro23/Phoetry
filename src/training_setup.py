@@ -139,24 +139,7 @@ class TrainingLLM:
             dataset = load_dataset("statworx/haiku")
         else:
             logger.info("Loading classic poems datasets...")
-            foundation_poems = load_dataset("shahules786/PoetryFoundationData")
-            mexwell_poems = pd.read_csv(f"{kagglehub.dataset_download('mexwell/poem-dataset')}/final_df_emotions(remove-bias).csv")
-            mexwell_poems["author"] = "unknown"
-            mexwell_poems = mexwell_poems[["label", "poem content", "author", "type", "age"]]
-            mexwell_poems.columns = ["poem name", "content", "author", "type", "age"]
-            abiemo_poems = pd.read_csv(f"{kagglehub.dataset_download('pkkazipeta143/americanbritishindian-emotion-poetry-dataset')}/ABIEMO_2334.csv")
-            abiemo_poems["author"] = "unknown"
-            abiemo_poems["age"] = "unknown"
-            abiemo_poems = abiemo_poems[["Emotions", "poems", "author", "class", "age"]]
-            abiemo_poems.columns = ["poem name", "content", "author", "type", "age"]
-            dataset = DatasetDict()
-            dataset["train"] = concatenate_datasets(
-                [
-                    foundation_poems["train"],
-                    Dataset.from_pandas(mexwell_poems),
-                    Dataset.from_pandas(abiemo_poems)
-                ]
-            )
+            dataset = load_dataset("shahules786/PoetryFoundationData")
 
         logger.info("Saving dataset to S3 via save_to_disk...")
         with tempfile.TemporaryDirectory() as tmpdir:

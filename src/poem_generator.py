@@ -2,6 +2,7 @@ import requests
 import re
 import os
 import time
+import numpy as np
 import logging
 from src.my_log import get_logger
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
@@ -153,15 +154,25 @@ class PoemModel:
             logger.debug(f'but found {self.dico.keys()}')
             return False
 
-    def generate_poem(self, theme: str):
+    def generate_poem(self, poem_type,theme: str):
         """
         Generate a poem based on a theme and poem type.
         The parameters from each type are automatically loaded from the JSON config.
         """
         args = self.generation_params
 
-        # poem_type = self.name.split("_")[-1]
-        prompt = f"{theme} —\n"
+        if poem_type=="gpt2_en_poems":
+            start_of_promt = [
+            "For I am the",
+            "I only I could have the",
+            "Then we see the"
+            ]
+            # Set up the initial prompt
+            num_start_of_prompt = np.random.randint(0, 3)
+            prompt = f"{start_of_promt[num_start_of_prompt]} {theme},"
+        
+        else:
+            prompt = f"{theme} —\n"
 
         inputs = self.tokenizer.encode(
             prompt,
@@ -181,18 +192,19 @@ class PoemModel:
         poem = self.tokenizer.decode(output[0], skip_special_tokens=True)
 
         # do not include theme at the start of the poem
-        poem = poem[len(prompt):].strip()
-        poem = re.sub(r"^\.\s*", "", poem)
-        poem = poem.replace(" / ", "\n")
-        poem = re.sub(r"\.(?=[A-Za-z])", ". ", poem)
-        poem = re.sub(r"[^A-Za-zÀ-ÖØ-öø-ÿ0-9\.,;:!\?\-\n' ]+", "", poem)
-        poem = re.sub(r"([.,;:!?])\1+", r"\1", poem)
-        poem = re.sub(
-            r"\b(lol|bye|omg|haha|uh|nah|yo|brb|wtf|racist)\b",
-            "",
-            poem,
-            flags=re.IGNORECASE
-        )
+        if poem_type=="gt2_fr_haiku":
+            poem = poem[len(prompt):].strip()
+            poem = re.sub(r"^\.\s*", "", poem)
+            poem = poem.replace(" / ", "\n")
+            poem = re.sub(r"\.(?=[A-Za-z])", ". ", poem)
+            poem = re.sub(r"[^A-Za-zÀ-ÖØ-öø-ÿ0-9\.,;:!\?\-\n' ]+", "", poem)
+            poem = re.sub(r"([.,;:!?])\1+", r"\1", poem)
+            poem = re.sub(
+                r"\b(lol|bye|omg|haha|uh|nah|yo|brb|wtf|racist)\b",
+                "",
+                poem,
+                flags=re.IGNORECASE
+            )
 
         logger.info("Decoding : Succes --> poem")
         logger.info(f"Length of poem : {len(poem)}")
