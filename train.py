@@ -8,7 +8,7 @@ from src.my_log import get_logger
 logger = get_logger(name=__name__)
 
 # PATH TO BUCKET ---------------------------
-BUCKET_NAME = "os.environ["BUCKET_NAME"]"
+BUCKET_NAME = os.environ["BUCKET_NAME"]
 s3_uri = f"s3://{BUCKET_NAME}"
 
 # POEM CHOICE ---------------------------
