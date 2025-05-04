@@ -2,6 +2,7 @@
   <!--img src="https://github.com/user-attachments/assets/aed37485-afd3-4943-926f-8b962efd1d99" alt="image" width="500"/><br>-->
   <img src="https://github.com/user-attachments/assets/e8a4a5ba-8ab8-4a79-9b8f-acb8d8ac06fd" alt="image" width="500"/><br>
   <strong>Version : 1.0</strong>
+    <a href="Tanoh_Zabar_rapport.pdf"><strong>View the full report (PDF)</strong></a>
 </p>
 
 
