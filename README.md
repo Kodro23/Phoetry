@@ -174,14 +174,14 @@ Phoetry
   |- Image_models
 ```
 
-### 👨‍💻3. Developper and DataScientist's guide
+### 👨‍💻3. Developer and DataScientist's guide
 
 
 
 #### 3.1 Integration
 The integration of the project is based on the repository : [integration-repository](https://github.com/lzabar/Phoetry)
  
-A push to main leads to the creation of a new docker image. We suggest to use the dev branche for developpement. 
+A push to main leads to the creation of a new docker image. We suggest to use the dev branche for development. 
 
 To push a new version of application you should use the command below (after commit) :
 ```
@@ -210,7 +210,7 @@ To get the documentation of the application you only need to run the command :
 ```
 pdoc src
 ```
-As an exemple to get docuementation of src/files
+As an exemple to get documentation of src/files
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,7 +221,7 @@ As an exemple to get docuementation of src/files
 @PaulToudret
 <!-- License -->
 ## 📜IV. License
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
 <!-- Acknowledgments -->
 ## 🤝V. Acknowledgments
 
