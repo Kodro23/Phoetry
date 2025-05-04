@@ -59,8 +59,7 @@ The model is fine-tuned on poems's dataset. For the generation, the label of the
 The poems are a little wonky.
 
 ### 🧰4. Built with
-* logiciel 1
-* logiciel 2...
+* python 3.12.9
 
 ### 📈5. Improvements
 Points of improvement:
