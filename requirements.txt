@@ -26,3 +26,6 @@ pdoc==15.0.1
 fastapi==0.115.12
 uvicorn==0.34.0
 python-multipart==0.0.20
+
+# Used for evaluation
+textstat== 0.7.5
