@@ -1,3 +1,8 @@
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import argparse
 import requests
 
@@ -43,7 +48,7 @@ logger.info(f"Selected model '{model_name}' → {model_url}")
 
 # INITIALIZE AND GENERATE ---------------------------
 poem_model = PoemModel(URL=model_url)
-poem = poem_model.generate_poem(theme=args.theme)
+poem = poem_model.generate_poem(poem_type=model_name, theme=args.theme)
 
 # RESULT ---------------------------
 print("\n" + "="*60)
