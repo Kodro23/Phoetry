@@ -57,7 +57,7 @@ We use OpenAI's GPT-2 as base, which is a trained large-scale unsupervised langu
 The model is fine-tuned on poems's dataset. For the generation, the label of the input image is used as the theme of the poem, whether it's a classical english poem or an haiku.
 
 ### ⚠️3. Disclaimer
-The poems are a little wonky.
+The poems are a little wonky, the model works best for generating haikus.
 
 ### 🧰4. Built with
 * python 3.12.9
