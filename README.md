@@ -6,7 +6,7 @@
 </p>
 
 
-[Check also this project] (https://github.com/Kodro23/Telco-challenge)
+Check also this project: https://github.com/Kodro23/Telco-challenge
 
 <!-- TABLE OF CONTENTS -->
 <details>
